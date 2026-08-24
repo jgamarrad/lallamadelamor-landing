@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Script from "next/script"
 import "./globals.css"
 
 const siteUrl = "https://lallamadelamor.pe"
@@ -6,6 +7,9 @@ const siteName = "La Llama del Amor"
 const title = "La Llama del Amor – Regalos Personalizados en Lima"
 const description =
   "Regalos únicos y personalizados en Lima: chocolates, brownies, rosas y detalles especiales para cumpleaños, enamorados, graduaciones y más. Cotiza por WhatsApp. Envío a domicilio."
+
+// ID de medición de Google Analytics 4 (flujo "Sitio principal")
+const GA_MEASUREMENT_ID = "G-EB7EGNB4GG"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -151,7 +155,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+
+        {/* Google Analytics 4 */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+      </body>
     </html>
   )
 }
