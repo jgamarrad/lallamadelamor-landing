@@ -85,14 +85,15 @@ export const metadata: Metadata = {
 // Esto hace que Google muestre info rica: nombre, teléfono, área de servicio, reseñas
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "Store",
+  "@id": `${siteUrl}/#negocio`,
   name: siteName,
   description,
   url: siteUrl,
   telephone: "+51984096041",
+  email: "ventas@lallamadelamor.pe",
   image: `${siteUrl}/images/og-image.jpg`,
-  priceRange: "S/.65 – S/.200",
-  servesCuisine: "Chocolates y repostería personalizada",
+  priceRange: "S/.60 – S/.200",
   areaServed: {
     "@type": "City",
     name: "Lima",
@@ -105,7 +106,35 @@ const jsonLd = {
   },
   sameAs: [
     "https://instagram.com/lallamadelamor.pe",
-    // agrega tu Facebook si tienes
+    "https://www.facebook.com/lallamadelamor.pe",
+    // agrega tu Facebook si tienes uno distinto, o quita esta línea
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "3",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Valeria M." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody:
+        "Mi novio se quedó sin palabras. La caja estaba hermosa. Definitivamente lo pido de nuevo.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Carlos R." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody:
+        "Pedí el Correo Postal para mi mamá y lloró de la emoción. El detalle de la foto es increíble.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Luciana P." },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Rapidísimos y atentos. El regalo llegó perfecto y fue todo un éxito.",
+    },
   ],
 }
 

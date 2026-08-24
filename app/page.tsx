@@ -37,6 +37,29 @@ const testimonios = [
   { text: '"Rapidísimos y atentos. El regalo llegó perfecto y fue todo un éxito."', author: '— Luciana P., San Isidro' },
 ]
 
+const faqs = [
+  {
+    q: '¿Hacen delivery a todo Lima?',
+    a: 'Sí, llegamos a la mayoría de distritos de Lima. Coordinamos el costo y tiempo exacto de envío por WhatsApp según tu zona.',
+  },
+  {
+    q: '¿Puedo personalizar el chocolate con una foto o mensaje?',
+    a: 'Sí. La mayoría de nuestros productos permiten personalizar con tu foto, nombre y mensaje, impresos con tinta comestible o en letras de chocolate.',
+  },
+  {
+    q: '¿Con cuánta anticipación debo hacer mi pedido?',
+    a: 'Recomendamos pedir con 1 a 2 días de anticipación para personalizados. En fechas de alta demanda (San Valentín, Día de la Madre) recomendamos coordinar con más días de anticipación.',
+  },
+  {
+    q: '¿Hacen pedidos corporativos o en cantidad?',
+    a: 'Sí, trabajamos pedidos corporativos con logo y diseño personalizado para empresas. Escríbenos por WhatsApp para cotizar según cantidad.',
+  },
+  {
+    q: '¿Cómo pago mi pedido?',
+    a: 'Coordinamos el pago directamente por WhatsApp una vez confirmado tu pedido, con las opciones disponibles según tu preferencia.',
+  },
+]
+
 const gradientGold = {
   background: 'linear-gradient(135deg, var(--gold) 0%, var(--gold-2) 55%, var(--gold-deep) 100%)',
   WebkitBackgroundClip: 'text' as const,
@@ -266,6 +289,46 @@ export default function LandingPage() {
             </a>
           </div>
         </div>
+      </section>
+
+      {/* ── PREGUNTAS FRECUENTES ── */}
+      <section className="px-6 py-24" style={{ background: 'var(--panel)' }}>
+        <div className="text-center mb-14">
+          <span style={{ fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--gold)', display: 'block', marginBottom: '0.75rem' }}>Resolvemos tus dudas</span>
+          <h2 className="section-title" style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', display: 'inline-block' }}>
+            Preguntas <em style={{ color: 'var(--gold-2)' }}>frecuentes</em>
+          </h2>
+        </div>
+        <div className="mx-auto" style={{ maxWidth: 720, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          {faqs.map((item) => (
+            <details key={item.q} className="card p-6" style={{ cursor: 'pointer' }}>
+              <summary style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--txt)', listStyle: 'none' }}>
+                {item.q}
+              </summary>
+              <p style={{ fontSize: '0.9rem', color: 'var(--muted)', lineHeight: 1.7, marginTop: '0.75rem' }}>
+                {item.a}
+              </p>
+            </details>
+          ))}
+        </div>
+        {/* Schema.org FAQPage — habilita el rich snippet de preguntas en Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: faqs.map((item) => ({
+                '@type': 'Question',
+                name: item.q,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: item.a,
+                },
+              })),
+            }),
+          }}
+        />
       </section>
 
       {/* ── TESTIMONIOS ── */}
