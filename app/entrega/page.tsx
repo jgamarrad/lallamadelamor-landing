@@ -88,7 +88,6 @@ export default function Entrega() {
           <ul style={ul}>
             <li>Los productos de chocolate deben conservarse en un lugar fresco y seco, alejados del sol directo.</li>
             <li>Se recomienda consumir en un plazo máximo de <strong style={{ color: 'var(--txt)' }}>7 días</strong> desde la recepción.</li>
-            <li>En época de verano o calor intenso, se recomienda refrigerar.</li>
           </ul>
         </section>
 
