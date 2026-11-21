@@ -35,7 +35,7 @@ export default function Entrega() {
           <h2 style={h2}>Tiempos de preparación</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             {[
-              { label: 'Pedido estándar',   time: '24 – 48 horas hábiles', note: 'desde la confirmación y pago' },
+              { label: 'Pedido estándar',   time: 'Al menos 1 día',         note: 'de anticipación, desde la confirmación y la reserva' },
               { label: 'Pedido express',    time: 'Mismo día',              note: 'sujeto a disponibilidad, consultar' },
               { label: 'Fechas especiales', time: '5+ días antes',          note: 'San Valentín, Día de la Madre, Navidad, etc.' },
             ].map((item) => (
