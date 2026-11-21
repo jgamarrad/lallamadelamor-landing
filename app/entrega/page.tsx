@@ -57,11 +57,12 @@ export default function Entrega() {
 
         <section>
           <h2 style={h2}>Costo de envío</h2>
-          <p>
-            El costo de envío depende del distrito de entrega y se informa al momento de cotizar.
-            Para algunos distritos céntricos podemos ofrecer envío sin costo en pedidos mayores
-            a un monto mínimo — consulta disponibilidad.
-          </p>
+          <ul style={ul}>
+            <li><strong>S/12:</strong> Miraflores y San Isidro.</li>
+            <li><strong>S/15:</strong> Jesús María, Pueblo Libre, San Miguel, San Borja, Surco, Surquillo y Barranco.</li>
+            <li><strong>Otros distritos de Lima:</strong> te cotizamos por WhatsApp según la dirección exacta, ya que en distritos extensos el costo puede variar.</li>
+            <li>También puedes recoger tu pedido en Miraflores, previa coordinación.</li>
+          </ul>
         </section>
 
         <section>
@@ -87,7 +88,6 @@ export default function Entrega() {
           <ul style={ul}>
             <li>Los productos de chocolate deben conservarse en un lugar fresco y seco, alejados del sol directo.</li>
             <li>Se recomienda consumir en un plazo máximo de <strong style={{ color: 'var(--txt)' }}>7 días</strong> desde la recepción.</li>
-            <li>En época de verano o calor intenso, se recomienda refrigerar.</li>
           </ul>
         </section>
 
