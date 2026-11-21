@@ -34,7 +34,7 @@ const ocasiones = [
 const faqs = [
   {
     q: '¿Hacen delivery a todo Lima?',
-    a: 'Sí, llegamos a la mayoría de distritos de Lima. Coordinamos el costo y tiempo exacto de envío por WhatsApp según tu zona.',
+    a: 'Sí, entregamos en Lima Metropolitana. Miraflores y San Isidro: S/12. Jesús María, Pueblo Libre, San Miguel, San Borja, Surco, Surquillo y Barranco: S/15. Para otros distritos te cotizamos por WhatsApp según la dirección exacta.',
   },
   {
     q: '¿Puedo personalizar el chocolate con una foto o mensaje?',
