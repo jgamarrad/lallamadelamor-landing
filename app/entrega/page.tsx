@@ -97,7 +97,7 @@ export default function Entrega() {
             Escríbenos directamente por WhatsApp y te respondemos en minutos:
           </p>
           <a
-            href="https://api.whatsapp.com/send?phone=51984096041&text=Hola!%20Tengo%20una%20consulta%20sobre%20la%20entrega%20de%20mi%20pedido"
+            href="https://api.whatsapp.com/send?phone=51984096041&text=%C2%A1Hola!%20%F0%9F%A6%99%20Tengo%20una%20consulta%20sobre%20la%20entrega%20de%20mi%20pedido."
             target="_blank"
             rel="noopener noreferrer"
             style={{
