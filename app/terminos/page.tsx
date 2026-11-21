@@ -46,9 +46,9 @@ export default function Terminos() {
         <section>
           <h2 style={h2}>3. Precios y pagos</h2>
           <ul style={ul}>
-            <li>Todos los precios están expresados en Soles peruanos (S/.) e incluyen IGV.</li>
+            <li>Todos los precios están expresados en Soles peruanos (S/) e incluyen IGV.</li>
             <li>El pedido se confirma con el pago adelantado del 50% o el 100% según se acuerde.</li>
-            <li>Formas de pago: Yape, Plin, transferencia bancaria, depósito.</li>
+            <li>Formas de pago: Yape, Plin, transferencia bancaria, depósito o tarjeta de crédito mediante link de Mercado Pago. No trabajamos con pago contra entrega.</li>
             <li>Los precios pueden variar sin previo aviso. El precio acordado al momento del pedido se respeta siempre.</li>
           </ul>
         </section>
@@ -56,7 +56,7 @@ export default function Terminos() {
         <section>
           <h2 style={h2}>4. Tiempos de preparación</h2>
           <ul style={ul}>
-            <li>El tiempo de preparación estándar es de <strong style={{ color: 'var(--txt)' }}>24 a 48 horas hábiles</strong> desde la confirmación del pedido.</li>
+            <li>Los pedidos se hacen con <strong style={{ color: 'var(--txt)' }}>al menos 1 día de anticipación</strong> desde la confirmación. Las entregas el mismo día están sujetas a disponibilidad.</li>
             <li>Para fechas especiales (San Valentín, Día de la Madre, Navidad) se recomienda hacer el pedido con al menos 5 días de anticipación.</li>
             <li>Los pedidos urgentes están sujetos a disponibilidad y pueden tener un costo adicional.</li>
           </ul>

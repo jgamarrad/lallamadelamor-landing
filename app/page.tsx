@@ -15,11 +15,11 @@ function WaIcon({ size = 20 }: { size?: number }) {
 }
 
 const productos = [
-  { img: '/images/correo-postal.jpg', alt: 'Correo Postal de Chocolate', badge: '⭐ Favorito',   name: 'Correo Postal de Chocolate',  desc: 'Caja con mensaje en chocolate, mensaje de texto y foto personalizada. La forma más dulce de decir lo que sientes.',             price: 'S/.85', desde: true,  emoji: '🍫', waMsg: 'Hola! Me interesa el Correo Postal de Chocolate. ¿Me brinda precio y detalles?' },
-  { img: '/images/caja-miski.jpg',    alt: 'Caja Miski Te Amo',          badge: '🔥 Más vendido',  name: 'Caja Miski "Te Amo"',          desc: 'Letras de chocolate personalizadas con decoración premium. Para decirlo de la manera más especial.',          price: 'S/.60', desde: true,  emoji: '❤️', waMsg: 'Hola! Me interesa la Caja Miski Te Amo. ¿Me brinda precio y detalles?' },
-  { img: '/images/brownie-cumple.jpg',alt: 'Choco Brownie Cumpleañero',  badge: '🎉 Cumpleaños', name: 'Choco Brownie Cumpleañero',    desc: 'Caja de 4 brownies y 4 tabletas de chocolate con historia personalizada. El regalo más especial del año.',             price: 'S/.65', desde: true,  emoji: '🎂', waMsg: 'Hola! Me interesa el Choco Brownie Cumpleañero. ¿Me brinda precio y detalles?' },
-  { img: '/images/miski-peluche.jpg',   alt: 'Pack de Aniversario',      badge: '💫 Romántico', name: 'Caja Miski + Peluche',        desc: 'Letras de chocolate personalizadas con peluche, bolsa, tarjeta y globo. Un combo irresistible.',                       price: 'S/.125',desde: false, emoji: '🦙', waMsg: 'Hola! Me interesa el Box Brownie + Llamita. ¿Me brinda precio y detalles?' },
-  { img: '/images/caja-osito.jpg',    alt: 'Caja Acrílica Osito 3D',     badge: '✨ Premium',    name: 'Caja Acrílica Osito 3D',       desc: 'Osito de chocolate 3D en elegante caja acrílica. Presentación de lujo para momentos únicos.',                  price: 'S/.85', desde: false, emoji: '🐻', waMsg: 'Hola! Me interesa la Caja Acrílica con Osito 3D. ¿Me brinda precio y detalles?' },
+  { img: '/images/correo-postal.jpg', alt: 'Correo Postal de Chocolate', badge: '⭐ Favorito',   name: 'Correo Postal de Chocolate',  desc: 'Caja con mensaje en chocolate, mensaje de texto y foto personalizada. La forma más dulce de decir lo que sientes.',             price: 'S/85', desde: true,  emoji: '🍫', waMsg: 'Hola! Me interesa el Correo Postal de Chocolate. ¿Me brinda precio y detalles?' },
+  { img: '/images/caja-miski.jpg',    alt: 'Caja Miski Te Amo',          badge: '🔥 Más vendido',  name: 'Caja Miski "Te Amo"',          desc: 'Letras de chocolate personalizadas con decoración premium. Para decirlo de la manera más especial.',          price: 'S/60', desde: true,  emoji: '❤️', waMsg: 'Hola! Me interesa la Caja Miski Te Amo. ¿Me brinda precio y detalles?' },
+  { img: '/images/brownie-cumple.jpg',alt: 'Choco Brownie Cumpleañero',  badge: '🎉 Cumpleaños', name: 'Choco Brownie Cumpleañero',    desc: 'Caja de 4 brownies y 4 tabletas de chocolate con historia personalizada. El regalo más especial del año.',             price: 'S/65', desde: true,  emoji: '🎂', waMsg: 'Hola! Me interesa el Choco Brownie Cumpleañero. ¿Me brinda precio y detalles?' },
+  { img: '/images/miski-peluche.jpg',   alt: 'Pack de Aniversario',      badge: '💫 Romántico', name: 'Caja Miski + Peluche',        desc: 'Letras de chocolate personalizadas con peluche, bolsa, tarjeta y globo. Un combo irresistible.',                       price: 'S/125',desde: false, emoji: '🦙', waMsg: 'Hola! Me interesa el Box Brownie + Llamita. ¿Me brinda precio y detalles?' },
+  { img: '/images/caja-osito.jpg',    alt: 'Caja Acrílica Osito 3D',     badge: '✨ Premium',    name: 'Caja Acrílica Osito 3D',       desc: 'Osito de chocolate 3D en elegante caja acrílica. Presentación de lujo para momentos únicos.',                  price: 'S/85', desde: false, emoji: '🐻', waMsg: 'Hola! Me interesa la Caja Acrílica con Osito 3D. ¿Me brinda precio y detalles?' },
 ]
 
 const ocasiones = [
@@ -29,12 +29,6 @@ const ocasiones = [
   { emoji: '👨‍👩‍👧', text: 'Mamá / Papá — Dile cuánto los quieres' },
   { emoji: '💼', text: 'Corporativo — Regala con identidad' },
   { emoji: '🌹', text: 'San Valentín — Rosas, chocolate y amor' },
-]
-
-const testimonios = [
-  { text: '"Mi novio se quedó sin palabras. La caja estaba hermosa. Definitivamente lo pido de nuevo."', author: '— Valeria M., Lima' },
-  { text: '"Pedí el Correo Postal para mi mamá y lloró de la emoción. El detalle de la foto es increíble."', author: '— Carlos R., Miraflores' },
-  { text: '"Rapidísimos y atentos. El regalo llegó perfecto y fue todo un éxito."', author: '— Luciana P., San Isidro' },
 ]
 
 const faqs = [
@@ -48,7 +42,7 @@ const faqs = [
   },
   {
     q: '¿Con cuánta anticipación debo hacer mi pedido?',
-    a: 'Recomendamos pedir con 1 a 2 días de anticipación para personalizados. En fechas de alta demanda (San Valentín, Día de la Madre) recomendamos coordinar con más días de anticipación.',
+    a: 'Pide con al menos 1 día de anticipación. Si lo necesitas para hoy, escríbenos: hacemos entregas el mismo día según disponibilidad. En fechas de alta demanda (San Valentín, Día de la Madre) te recomendamos reservar con más días.',
   },
   {
     q: '¿Hacen pedidos corporativos o en cantidad?',
@@ -56,7 +50,11 @@ const faqs = [
   },
   {
     q: '¿Cómo pago mi pedido?',
-    a: 'Coordinamos el pago directamente por WhatsApp una vez confirmado tu pedido, con las opciones disponibles según tu preferencia.',
+    a: 'Aceptamos Yape, Plin, transferencia bancaria y tarjeta de crédito (te enviamos un link seguro de Mercado Pago). Reservas tu pedido con el 50% y pagas el otro 50% cuando está listo, antes del envío. No trabajamos con pago contra entrega.',
+  },
+  {
+    q: '¿Puedo recoger mi pedido?',
+    a: 'Sí, puedes recogerlo en Miraflores, previa coordinación por WhatsApp.',
   },
 ]
 
@@ -329,23 +327,6 @@ export default function LandingPage() {
             }),
           }}
         />
-      </section>
-
-      {/* ── TESTIMONIOS ── */}
-      <section className="px-6 py-24 text-center">
-        <span style={{ fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.15em', color: 'var(--gold)', display: 'block', marginBottom: '0.75rem' }}>Lo que dicen</span>
-        <h2 className="section-title" style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', display: 'inline-block', marginBottom: '3.5rem' }}>
-          Clientes que ya <em style={{ color: 'var(--gold-2)' }}>enamoraron</em>
-        </h2>
-        <div className="grid gap-5 mx-auto" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px,1fr))', maxWidth: 900 }}>
-          {testimonios.map((t) => (
-            <div key={t.author} className="card text-left p-7">
-              <div style={{ color: 'var(--gold)', fontSize: '0.85rem', letterSpacing: '0.1em', marginBottom: '1rem' }}>★★★★★</div>
-              <p style={{ fontSize: '1.1rem', fontStyle: 'italic', fontWeight: 300, color: 'var(--txt)', lineHeight: 1.6, marginBottom: '1rem' }}>{t.text}</p>
-              <p style={{ fontSize: '0.78rem', color: 'var(--muted)', letterSpacing: '0.05em' }}>{t.author}</p>
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* ── CTA FINAL ── */}
