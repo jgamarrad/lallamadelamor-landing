@@ -6,6 +6,14 @@ const WA = '51984096041'
 const wa = (msg: string) =>
   `https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent(msg)}`
 
+// Mensajes de WhatsApp (formato: *texto* = negrita; evitar "_")
+const MSG_PRODUCTO = (nombre: string) =>
+  `¡Hola! 🦙💛 Me encantó este regalo: *${nombre}*\n\n📅 Lo necesito para el:\n📍 Distrito de entrega:`
+const MSG_COTIZAR =
+  '¡Hola! 🦙💛 Quiero cotizar un regalo.\n\n💰 Mi presupuesto es de:\n📅 Lo necesito para el:'
+const MSG_AYUDA =
+  '¡Hola! 🦙💛 Estoy buscando un regalo y me gustaría que me ayuden a elegir.\n\n📅 Lo necesito para el:\n📍 Distrito de entrega:'
+
 function WaIcon({ size = 20 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -84,14 +92,14 @@ export default function LandingPage() {
           <li><a href="#ocasiones" style={{ color: 'var(--muted)', textDecoration: 'none', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Ocasiones</a></li>
           <li><a href="https://sv.lallamadelamor.pe/inicio" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--muted)', textDecoration: 'none', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Catálogo</a></li>
           <li>
-            <a href={wa('Hola! Quiero cotizar un detalle 🎁')} target="_blank" rel="noopener noreferrer" className="btn-whatsapp" style={{ fontSize: '0.8rem', padding: '0.5rem 1.1rem' }}>
+            <a href={wa(MSG_COTIZAR)} target="_blank" rel="noopener noreferrer" className="btn-whatsapp" style={{ fontSize: '0.8rem', padding: '0.5rem 1.1rem' }}>
               <WaIcon size={16} /> Cotizar ahora
             </a>
           </li>
         </ul>
 
         {/* Botón — solo móvil */}
-        <a href={wa('Hola! Quiero cotizar un detalle 🎁')} target="_blank" rel="noopener noreferrer"
+        <a href={wa(MSG_COTIZAR)} target="_blank" rel="noopener noreferrer"
            className="nav-mobile-cta btn-whatsapp"
            style={{ fontSize: '0.72rem', padding: '0.4rem 0.75rem', marginLeft: '0.5rem', flexShrink: 0, whiteSpace: 'nowrap' }}>
           <WaIcon size={13} /> Cotizar
@@ -121,7 +129,7 @@ export default function LandingPage() {
               Chocolates, brownies, rosas y detalles personalizados para cada momento especial. Entrega en Lima.
             </p>
             <div className="flex flex-row flex-wrap gap-3 items-center">
-              <a href={wa('Hola! Quiero cotizar por WhatsApp 🎁')} target="_blank" rel="noopener noreferrer"
+              <a href={wa(MSG_COTIZAR)} target="_blank" rel="noopener noreferrer"
                  className="btn-whatsapp"
                  style={{ fontSize: '0.85rem', padding: '0.7rem 1.3rem' }}>
                 <WaIcon size={17} /> Cotizar por WhatsApp
@@ -182,7 +190,7 @@ export default function LandingPage() {
         </div>
         <div className="grid gap-5 mx-auto" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(260px,1fr))', maxWidth: 1100 }}>
           {productos.map((p) => (
-            <ProductCard key={p.name} href={wa(p.waMsg)} img={p.img} alt={p.alt} badge={p.badge} name={p.name} desc={p.desc} price={p.price} desde={p.desde} fallbackEmoji={p.emoji} />
+            <ProductCard key={p.name} href={wa(MSG_PRODUCTO(p.name))} img={p.img} alt={p.alt} badge={p.badge} name={p.name} desc={p.desc} price={p.price} desde={p.desde} fallbackEmoji={p.emoji} />
           ))}
           {/* Ver más → catálogo */}
           <a href="https://sv.lallamadelamor.pe/inicio" target="_blank" rel="noopener noreferrer"
@@ -282,7 +290,7 @@ export default function LandingPage() {
             <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: 1.7, maxWidth: 260 }}>
               Te recomendamos opciones según tu presupuesto y ocasión. Respuesta rápida por WhatsApp.
             </p>
-            <a href={wa('Hola! Necesito ayuda para elegir un regalo 🎁')} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+            <a href={wa(MSG_AYUDA)} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
               <WaIcon size={18} /> Te ayudamos por WhatsApp
             </a>
           </div>
@@ -339,7 +347,7 @@ export default function LandingPage() {
         <p style={{ fontSize: '1rem', color: 'var(--muted)', maxWidth: 440, margin: '0 auto 3.5rem', lineHeight: 1.8, position: 'relative' }}>
           Cuéntanos tu idea y recibe opciones con precio según tu presupuesto y ocasión. Sin compromiso.
         </p>
-        <a href={wa('Hola! Quiero cotizar un detalle especial 🎁 ❤️')} target="_blank" rel="noopener noreferrer" className="btn-whatsapp-big" style={{ position: 'relative' }}>
+        <a href={wa(MSG_COTIZAR)} target="_blank" rel="noopener noreferrer" className="btn-whatsapp-big" style={{ position: 'relative' }}>
           <WaIcon size={24} /> Escribir por WhatsApp
         </a>
       </section>
@@ -417,7 +425,7 @@ export default function LandingPage() {
       </footer>
 
       {/* ── WHATSAPP FLOTANTE ── */}
-      <a href={wa('Hola! Quiero hacer un pedido 🎁')} target="_blank" rel="noopener noreferrer" className="wa-float" title="Escribir por WhatsApp">
+      <a href={wa(MSG_AYUDA)} target="_blank" rel="noopener noreferrer" className="wa-float" title="Escribir por WhatsApp">
         <WaIcon size={26} />
       </a>
 
